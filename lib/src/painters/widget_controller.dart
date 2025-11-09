@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/gestures.dart';
 import 'package:rive/rive.dart';
 
@@ -142,7 +144,7 @@ base class RiveWidgetController extends BasicArtboardPainter
         artboardBounds: artboard.bounds,
         fit: fit,
         alignment: alignment,
-        size: size,
+        size: Size(0, 0),
         scaleFactor: layoutScaleFactor,
       ),
     );
@@ -161,7 +163,7 @@ base class RiveWidgetController extends BasicArtboardPainter
       artboardBounds: artboard.bounds,
       fit: fit,
       alignment: alignment,
-      size: size,
+      size: Size(0, 0),
       scaleFactor: layoutScaleFactor,
     );
     final HitResult hitResult;
@@ -189,9 +191,9 @@ base class RiveWidgetController extends BasicArtboardPainter
 
   @override
   void scheduleRepaint() {
-    if (isTickerActive) {
-      return; // Already in an active ticker state
-    }
+    // if (isTickerActive) {
+    //   return; // Already in an active ticker state
+    // }
     if (!_repaintScheduled) {
       super.scheduleRepaint();
       _repaintScheduled = true;

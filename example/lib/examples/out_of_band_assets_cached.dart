@@ -198,7 +198,7 @@ class __RiveRandomCachedImageState extends State<_RiveRandomCachedImage> {
 
   @override
   void dispose() {
-    _imageAsset?.dispose();
+    // _imageAsset?.dispose();
     _riveImageSampleFile?.dispose();
     _controller?.dispose();
     super.dispose();
@@ -299,7 +299,7 @@ class __RiveRandomCachedFontState extends State<_RiveRandomCachedFont> {
   @override
   void dispose() {
     for (var element in _fontAssets) {
-      element?.dispose();
+      // element?.dispose();
     }
     _riveFontSampleFile?.dispose();
     _controller?.dispose();
